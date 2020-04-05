@@ -1,24 +1,28 @@
 package builder
 
-class MazeBuilder {
+class MazeBuilder() {
 
-    fun buildMaze(){}
+    inner class Builder(){
 
-    fun buildRoom(room: Int){}
+        fun build(): MazeBuilder = MazeBuilder()
 
-    fun buildDoor(roomFrom: Int, roomTo: Int){}
+        fun buildMaze(){
+            println("Build Maze")
+        }
 
-    fun getMaze(): MazeBuilder = this
+        fun buildRoom(room: Int){
+            println("Build Maze with $room room")
+        }
 
-    protected constructor()
+        fun buildDoor(roomFrom: Int, roomTo: Int){
+            println("Build Maze with a door from $roomFrom to $roomTo")
+        }
+    }
 }
 
-val mazeBuilder = MazeBuilder::class
-
-fun create(builder: MazeBuilder): MazeBuilder{
-    builder.buildMaze()
-    builder.buildRoom(1)
-    builder.buildRoom(2)
-    builder.buildDoor(1, 2)
-    return builder.getMaze()
-}
+fun initializeBuilder(): MazeBuilder =
+    MazeBuilder().Builder().apply {
+        buildMaze()
+        buildRoom(1)
+        buildDoor(3, 4)
+    }.build()
