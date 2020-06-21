@@ -1,5 +1,7 @@
-import builder.initializeBuilder
+import asynchronous.AsyncClass
 
 fun main(args: Array<String>){
-    initializeBuilder()
+    val asyncClass = AsyncClass()
+    asyncClass.runAsync
+//    initializeBuilder()
 }
