@@ -8,7 +8,7 @@ import kotlinx.coroutines.runBlocking
 
 class FlowTool{
 
-    suspend fun getDataFlow(): Flow<Int> = flow{
+    private suspend fun getDataFlow(): Flow<Int> = flow{
         for(i in 10 downTo 0){
             delay(100)
             emit(i)
