@@ -8,6 +8,10 @@ class AsyncClass{
 
     lateinit var scope: CoroutineScope
 
+    private val coroutineScope: CoroutineScope by lazy{
+        CoroutineScope(SupervisorJob() + Dispatchers.Main)
+    }
+
     private fun _getScope(): CoroutineScope?{
         scope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
         return scope
