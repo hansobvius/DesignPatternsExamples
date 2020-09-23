@@ -1,7 +1,11 @@
-package asynchronous
+package application.asynchronous
 
 import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.flow
 import java.util.*
+import java.util.concurrent.Future
 import kotlin.coroutines.CoroutineContext
 
 class AsyncClass{
@@ -39,4 +43,26 @@ class AsyncClass{
     private suspend fun doFirst(): Int = Random().nextInt(10)
 
     private suspend fun doSecond(): Int = Random().nextInt(20)
+}
+
+fun doFlow() = runBlocking{
+    val data = futureTask()
+    data.collect {
+        println("value: $it")
+    }
+}
+
+private fun futureTask(): Flow<String> = flow{
+    for(i in 0 .. 5){
+        Thread.sleep(500)
+        emit(value = "$i")
+    }
+}
+
+private fun Future<String>.printValue(){
+    for(i in 0 .. 5){
+        Thread.sleep(500)
+        println("protValue $i")
+    }
+
 }

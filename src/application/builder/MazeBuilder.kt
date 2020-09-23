@@ -1,10 +1,11 @@
-package builder
+package application.builder
 
 class MazeBuilder() {
 
     inner class Builder(){
 
-        fun build(): MazeBuilder = MazeBuilder()
+        fun build(): MazeBuilder =
+            MazeBuilder()
 
         fun buildMaze(){
             println("Build Maze")

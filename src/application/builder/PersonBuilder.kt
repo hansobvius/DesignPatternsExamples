@@ -1,4 +1,4 @@
-package builder
+package application.builder
 
 /*
     exemple link: https://medium.com/@vicidroiddev/using-builders-in-kotlin-data-class-e8a08797ed56
