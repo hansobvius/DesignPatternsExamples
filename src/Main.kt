@@ -1,10 +1,9 @@
 import asynchronous.*
+import asynchronous.combine.runFlow
 import builder.MazeBuilder
 import builder.initializeBuilder
 
-fun main(args: Array<String>){
-    contextOperator()
-}
+fun main(args: Array<String>) = runFlow()
 
 
 private fun contextOperator(){
