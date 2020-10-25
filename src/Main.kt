@@ -2,8 +2,11 @@ import asynchronous.*
 import asynchronous.combine.runFlow
 import builder.MazeBuilder
 import builder.initializeBuilder
+import delegate.runDelegate
+import delegate.runWithDelegation
+import functions.printNameFromExtensionExample
 
-fun main(args: Array<String>) = runFlow()
+fun main(args: Array<String>) = printNameFromExtensionExample()
 
 
 private fun contextOperator(){
