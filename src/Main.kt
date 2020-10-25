@@ -1,10 +1,5 @@
-import asynchronous.*
-import asynchronous.combine.runFlow
-import builder.MazeBuilder
-import builder.initializeBuilder
-import delegate.runDelegate
-import delegate.runWithDelegation
-import functions.printNameFromExtensionExample
+import kotlinPratice.asynchronous.*
+import kotlinPratice.functions.printNameFromExtensionExample
 
 fun main(args: Array<String>) = printNameFromExtensionExample()
 

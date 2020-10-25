@@ -1,4 +1,4 @@
-package asynchronous
+package kotlinPratice.asynchronous
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.asFlow

@@ -1,6 +1,6 @@
 @file:Suppress("UNCHECKED_CAST")
 
-package asynchronous
+package kotlinPratice.asynchronous
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

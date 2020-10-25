@@ -1,6 +1,5 @@
-package asynchronous.combine
+package kotlinPratice.asynchronous.combine
 
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.combine

@@ -1,4 +1,4 @@
-package functions
+package kotlinPratice.functions
 
 fun printNameFromExtensionExample(){
     val `class` = GetClass.getClass()

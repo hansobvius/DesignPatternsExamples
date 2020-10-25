@@ -1,8 +1,7 @@
-package asynchronous
+package kotlinPratice.asynchronous
 
 import kotlinx.coroutines.*
 import java.util.*
-import kotlin.coroutines.CoroutineContext
 
 class AsyncClass{
 
